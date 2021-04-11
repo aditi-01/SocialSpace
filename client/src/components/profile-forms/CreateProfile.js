@@ -2,7 +2,7 @@ import React,{Fragment, useState} from 'react';
 import {Link,withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {createProfile} from '../../actions/profile'
+import {createProfile} from '../../actions/profile';
 
 const CreateProfile = ({createProfile,history}) => {
     const [formData, setFormData]=useState({
@@ -37,7 +37,7 @@ const CreateProfile = ({createProfile,history}) => {
     const onChange = e=> setFormData({...formData,[e.target.name]:e.target.value});
     const onSubmit = e => {
       e.preventDefault();
-      CreateProfile(formData,history);
+      createProfile(formData,history);
     }
 
     return (
